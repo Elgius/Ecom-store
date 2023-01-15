@@ -68,6 +68,21 @@
 				<h5>Total:   ${{order.get_cart_total|floatformat:2}}</h5>
 			</div>
 		</div>
+
+		<div>
+
+		{% if user.is_authenticated %}
+  		<p>you are registered and can continue : {{ user.username }}! </p>
+		{% else %}
+  		<p>You are not logged in</p>
+  		<a href="{% url 'login' %}">Log In</a>
+		{% endif %}
+
+	</div>
+
+
+
+
 	</div>
 
 	<script src="https://www.paypal.com/sdk/js?client-id=Aew-EHnbIL9nRLOnrGTg-PMjg3tf1mDMY10-U1ZFrHtnROBz1LXEM0LvUsTAG_fr6bbZCpilphJObhej&currency=USD"></script>

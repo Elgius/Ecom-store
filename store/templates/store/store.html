@@ -17,4 +17,108 @@
     {% endfor %}
 </div>
 
+<br>
+<br>
+
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        padding: 5%;
+        text-align: center;
+        font-size: 50;
+
+    }
+
+    #slideshow{
+        overflow: hidden;
+        height: 510px;
+        width: 728px;
+        margin: 0 auto;
+    }
+
+    .slide{
+        float:left;
+        height: 510px;
+        width: 728px
+    }
+
+    .slide-wrapper{
+        width: calc(728px * 4);
+
+        animation: slide 10s ease infinite;
+    }
+
+    .slide:nth-child(1){
+        background: powderblue;
+    }
+
+    .slide:nth-child(2){
+        background: powderblue;
+    }
+
+    .slide:nth-child(3){
+        background: powderblue;
+    }
+
+    .slide:nth-child(4){
+        background: powderblue;
+    }
+
+    @keyframes slide{
+        20%{
+            margin-left: 0px;
+        }
+
+        40%{
+            margin-left: calc(-728px * 1);
+        }
+
+        60%{
+            margin-left: calc(-728px * 2);
+            
+        }
+
+        80%{
+            margin-left: calc(-728px * 3);
+        }
+    }
+
+
+
+
+</style>
+
+<h1>Sale Items</h1>
+
+
+<div id = 'slideshow'>
+    <div class='slide-wrapper'>
+        <div class="slide">
+            <h1 class="slide-number">
+                <img src="static\2.jpg" alt="Summer glasses boss">
+            </h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">
+                <img src="static\3.jpg" alt="more glasses">
+            </h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">
+                <img src="static\4.jpg" alt="kickass glasses tbh">
+            </h1>
+        </div>
+        <div class="slide">
+            <h1 class="slide-number">
+                <img src="static\th.jpg" alt="ice cold glasses">
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 {% endblock content %}
+

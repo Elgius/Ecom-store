@@ -1,0 +1,37 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<form>
+    <div class="form-outline mb-4">
+        <input type="email" id="form" class="form-control" />
+        <label class="form-label" for="form">Email address</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <input type="password" id="form_pass" class="form-control" />
+        <label class="form-label" for="form_pass">Password</label>
+    </div>
+
+
+<div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="form_3" checked />
+            <label class="form-check-label" for="form_3">Remeber Details?</label>
+        </div>
+    </div>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="button" class="btn btn-primary btn-block mb-4">SIGN ME IN PLSSS</button>
+
+</div>
+
+
+</form>
+
+
+{% endblock content %}
+

@@ -1,0 +1,8 @@
+*.pyc
+*.jpg
+db.sqlite3
+
+ecommerce/__pycache__/settings.cpython-310.pyc
+store/__pycache__/urls.cpython-310.pyc
+store/__pycache__/views.cpython-310.pyc
+ecommerce/settings.py
